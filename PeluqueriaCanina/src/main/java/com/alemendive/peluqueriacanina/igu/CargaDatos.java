@@ -40,6 +40,7 @@ public class CargaDatos extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         btnLimpiar = new javax.swing.JButton();
         btnGuardar = new javax.swing.JButton();
+        btnVolverCD = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -164,6 +165,14 @@ public class CargaDatos extends javax.swing.JFrame {
             }
         });
 
+        btnVolverCD.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        btnVolverCD.setText("Volver");
+        btnVolverCD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverCDActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -171,7 +180,9 @@ public class CargaDatos extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(293, 293, 293)
+                        .addGap(52, 52, 52)
+                        .addComponent(btnVolverCD, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(150, 150, 150)
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
@@ -191,7 +202,9 @@ public class CargaDatos extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addComponent(jLabel1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addComponent(btnVolverCD, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -257,10 +270,15 @@ public class CargaDatos extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnGuardarActionPerformed
 
+    private void btnVolverCDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverCDActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnVolverCDActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnLimpiar;
+    private javax.swing.JButton btnVolverCD;
     private javax.swing.JComboBox<String> cmbAEsp;
     private javax.swing.JComboBox<String> cmbAlergico;
     private javax.swing.JLabel jLabel1;

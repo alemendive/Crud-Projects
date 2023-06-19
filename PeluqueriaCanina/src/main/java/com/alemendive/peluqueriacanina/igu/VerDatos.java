@@ -29,6 +29,8 @@ public class VerDatos extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         btnEliminar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
+        btnVolverCD = new javax.swing.JButton();
+        btnVolverVD = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -106,6 +108,22 @@ public class VerDatos extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
+        btnVolverCD.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        btnVolverCD.setText("Volver");
+        btnVolverCD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverCDActionPerformed(evt);
+            }
+        });
+
+        btnVolverVD.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        btnVolverVD.setText("Volver");
+        btnVolverVD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverVDActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -113,21 +131,35 @@ public class VerDatos extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(258, 258, 258)
+                        .addGap(42, 42, 42)
+                        .addComponent(btnVolverVD, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(125, 125, 125)
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(127, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(499, 499, 499)
+                    .addComponent(btnVolverCD, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(500, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(jLabel1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addComponent(btnVolverVD, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(62, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(375, 375, 375)
+                    .addComponent(btnVolverCD, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(375, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -192,6 +224,14 @@ public class VerDatos extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnEditarActionPerformed
 
+    private void btnVolverCDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverCDActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnVolverCDActionPerformed
+
+    private void btnVolverVDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverVDActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnVolverVDActionPerformed
+
     public void mostrarMensaje(String mensaje, String tipo, String titulo) {
         JOptionPane optionPane = new JOptionPane(mensaje);
         if (tipo.equals("Info")) {
@@ -209,6 +249,8 @@ public class VerDatos extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnVolverCD;
+    private javax.swing.JButton btnVolverVD;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
